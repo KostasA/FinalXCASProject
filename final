@@ -28,7 +28,23 @@ return factor(fpvalue);
 
 //sunarthsh Pochhammer
 Pochhammer(x,n):= {
+local fpvalue:=1;    //i timi pou tha epistrefetai
+local j:=0;
 
+if(n>=0) {          //gia n thetiko
+  while(j!=n) {
+    fpvalue:=fpvalue*(x+j);
+    j++;
+  }
+}
+else {             //gia n arnhtiko
+  while(j!=(abs(n))) {
+       fpvalue:=fpvalue*(1/(x-j-1));
+       j++;
+  }
+}
+
+return factor(fpvalue);
 }
 :;
 
