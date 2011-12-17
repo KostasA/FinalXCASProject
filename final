@@ -1,12 +1,12 @@
 // Gives the discrete difference f(x+1)-f(x)
 DifferenceDelta(f(x),x):= {
-  
+  return factor(f(x+1)-f(x));
 }
 :;
 
 //Gives the factorial power x^(n)
 FactorialPower(x,n):= {
-
+  
 }
 :;
 
