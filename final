@@ -1,0 +1,37 @@
+// Gives the discrete difference f(x+1)-f(x)
+DifferenceDelta(f(x),x):= {
+  
+}
+:;
+
+//Gives the factorial power x^(n)
+FactorialPower(x,n):= {
+
+}
+:;
+
+//sunarthsh Pochhammer
+Pochhammer(x,n):= {
+
+}
+:;
+
+
+
+StirlingS2(n,k):={
+  
+}
+:;
+
+
+//i sinartisi fm_[x_]:=FactorialPower[x,m+1]/m+1 pou orisame sto Mathematica
+phi_function(x,m):={
+  
+}
+:;
+
+//kuria sunarthsh
+sum_polynomials(f(k),k):= { //dexomaste to polywnumo ws pros tin metavliti k
+ 
+}
+:;
