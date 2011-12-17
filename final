@@ -72,6 +72,31 @@ phi_function(x,m):={
 
 //kuria sunarthsh
 sum_polynomials(f(k),k):= { //dexomaste to polywnumo ws pros tin metavliti k
+  local deg_poly;   //vathmos polywnumou
+  local coef_poly;  //suntelestes polywnumou
+  local j;   //deiktis
+  local l;  //deiktis
+  local x;
+  local final_result:=0;   //edw apothikeuetai to apotelesma
  
+  deg_poly:=degree(f(k),k);
+  coef_poly:=symb2poly(f(k),k);
+
+  //print("\nSyntelestes poluwnumoy:");
+  /*for(j:=0;j<=deg_poly;j++) {
+    print(coef_poly[j]);
+  }*/
+
+   for(j:=0;j<=deg_poly;j++) {
+    if(coef_poly[j]!=0) {   //koitazw tous sintelestes tou poluwnumou pou den einai 0 wste na tous prosthesw sto apotelesma,an einai 0 den exei noima
+     // print("Seira "+(deg_poly-j)+" ston pinaka StirlingS2");
+      for(l:=deg_poly-j;l>=0;l--) { //ston pinaka Stirling prepei na parw ta stoixeia apo deksia pros ta aristera
+       //print(StirlingS2(deg_poly-j,l));
+        final_result:=final_result+coef_poly[j]*StirlingS2(deg_poly-j,l)*phi_function(k,l);
+      }
+     // print("\n");
+    }
+  } 
+  return factor(expand(factor(final_result)));
 }
 :;
