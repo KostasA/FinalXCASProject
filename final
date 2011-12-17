@@ -66,7 +66,7 @@ StirlingS2(n,k):={
 
 //i sinartisi fm_[x_]:=FactorialPower[x,m+1]/m+1 pou orisame sto Mathematica
 phi_function(x,m):={
-  
+  return factor(FactorialPower(x,m+1)/(m+1));
 }
 :;
 
