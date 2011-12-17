@@ -6,6 +6,15 @@ DifferenceDelta(f(x),x):= {
 
 //Gives the factorial power x^(n)
 FactorialPower(x,n):= {
+local fpvalue:=1;    //i timi pou tha epistrefetai
+local j:=0;
+
+if(n>=0) {                // gia n thetiko
+  while(j!=n) {
+    fpvalue:=fpvalue*(x-j);
+    j++;
+  }
+}
   
 }
 :;
